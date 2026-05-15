@@ -4,7 +4,5 @@
 
 [node name="Label" type="Label" unique_id=1669894555]
 anchors_preset = -1
-offset_left = 0.11198425
-offset_top = -0.03999901
 text = "Hello World"
 script = ExtResource("1_y38sv")
