@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cqbenf0aklo3e"]
 
 [ext_resource type="Texture2D" uid="uid://cbjvwgsjjx1sd" path="res://assets/DawnOfWar.png" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://balcggp7jcil0" path="res://scripts/Camera2d.cs" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://dtgkg3m2qwk3h" path="res://assets/base_16x16.png" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1397474175]
 
@@ -8,5 +10,11 @@
 texture = ExtResource("1_uwrxv")
 
 [node name="Camera2D" type="Camera2D" parent="Map" unique_id=515380251]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("2_lnu2h")
 
 [node name="Unit" type="Sprite2D" parent="." unique_id=1882316515]
+position = Vector2(60, 180)
+texture = ExtResource("2_yqjtg")
