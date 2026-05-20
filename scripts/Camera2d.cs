@@ -14,4 +14,21 @@ public partial class Camera2d : Camera2D
 	public override void _Process(double delta)
 	{
 	}
+
+	public override void _Input(InputEvent @event)
+	{
+		if (@event is InputEventMouseButton mouseButton)
+		{
+			if (mouseButton.ButtonIndex == MouseButton.WheelUp)
+			{
+				Zoom += new Vector2(0.2f, 0.2f);
+			}
+			if (mouseButton.ButtonIndex == MouseButton.WheelDown)
+			{
+				Zoom -= new Vector2(0.2f, 0.2f);
+			}
+			float zoomLimit = Math.Clamp(Zoom.X, 0.5f, 1.1f);
+			Zoom = new Vector2(zoomLimit, zoomLimit);
+		}
+	}
 }
