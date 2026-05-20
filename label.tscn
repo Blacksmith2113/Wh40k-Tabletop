@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://pes4sj774vaf"]
-
-[ext_resource type="Script" uid="uid://cybl2fcfwq3nh" path="res://MainLabel.cs" id="1_y38sv"]
-
-[node name="Label" type="Label" unique_id=1669894555]
-anchors_preset = -1
-text = "Hello World"
-script = ExtResource("1_y38sv")
