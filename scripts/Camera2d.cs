@@ -7,7 +7,7 @@ public partial class Camera2d : Camera2D
 	public override void _Ready()
 	{
 		AnchorMode = AnchorModeEnum.DragCenter;
-		Zoom = new Vector2(1.15f, 1.15f);
+		Zoom = new Vector2(1f, 1f);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,7 +27,7 @@ public partial class Camera2d : Camera2D
 			{
 				Zoom -= new Vector2(0.2f, 0.2f);
 			}
-			float zoomLimit = Math.Clamp(Zoom.X, 0.5f, 1.1f);
+			float zoomLimit = Math.Clamp(Zoom.X, 0.95f, 3f);
 			Zoom = new Vector2(zoomLimit, zoomLimit);
 		}
 	}
