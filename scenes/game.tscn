@@ -1,20 +1,35 @@
 [gd_scene format=3 uid="uid://cqbenf0aklo3e"]
 
+[ext_resource type="Script" uid="uid://cyqxrbggn5uyl" path="res://scripts/Game.cs" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://cbjvwgsjjx1sd" path="res://assets/DawnOfWar.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://balcggp7jcil0" path="res://scripts/Camera2d.cs" id="2_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://dtgkg3m2qwk3h" path="res://assets/base_16x16.png" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://c68f52ofa4jxw" path="res://scripts/Map.cs" id="3_iywne"]
+[ext_resource type="Texture2D" uid="uid://bajaij1rhup0m" path="res://assets/base20x20px.svg" id="4_lbhrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p57ef"]
+size = Vector2(800, 700)
 
 [node name="Game" type="Node2D" unique_id=1397474175]
+script = ExtResource("1_lbhrr")
 
 [node name="Map" type="Sprite2D" parent="." unique_id=1788136101]
 texture = ExtResource("1_uwrxv")
+script = ExtResource("3_iywne")
 
-[node name="Camera2D" type="Camera2D" parent="Map" unique_id=515380251]
+[node name="Model" type="Sprite2D" parent="Map" unique_id=2135567402]
+texture_filter = 2
+position = Vector2(33, 27)
+texture = ExtResource("4_lbhrr")
+
+[node name="Area2D" type="Area2D" parent="Map" unique_id=693496918]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Area2D" unique_id=2112582668]
+visible = false
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_p57ef")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=515380251]
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 script = ExtResource("2_lnu2h")
-
-[node name="Unit" type="Sprite2D" parent="." unique_id=1882316515]
-position = Vector2(60, 180)
-texture = ExtResource("2_yqjtg")

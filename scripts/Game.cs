@@ -1,11 +1,12 @@
 using Godot;
 using System;
 
-public partial class Node : Godot.Node
+public partial class Game : Godot.Node
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		GD.Print("Viewport Size: ", GetViewport().GetVisibleRect().Size);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,6 +15,6 @@ public partial class Node : Godot.Node
 	}
 	    public override void _Input(InputEvent @event)
     {
-        GD.Print(@event.AsText());
+        //GD.Print(@event.AsText());
     }
 }
