@@ -12,7 +12,7 @@ public partial class Map : Sprite2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		camera = GetNode<Camera2d>("Camera2D");
+		camera = GetNode<Camera2d>("../Camera2D");
 		var area = GetNode<Area2D>("Area2D");
 		area.InputEvent += OnMapClicked;
 	}

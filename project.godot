@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Wh40kTabletop"
-run/main_scene="uid://cqbenf0aklo3e"
-config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+run/main_scene="uid://bktpldi2mon80"
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
